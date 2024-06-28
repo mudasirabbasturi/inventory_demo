@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>:: Inventory Demo :: Home</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="Lucid Bootstrap 4.1.1 Admin Template">
+    <meta name="author" content="WrapTheme, design by: ThemeMakker.com">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- VENDOR CSS -->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fonts/font-awesome.min.css">
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/color_skins.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ag-grid-community@31.3.2/styles/ag-grid.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ag-grid-community@31.3.2/styles/ag-theme-quartz.css" />
+
+</head>
+
+<body class="theme-cyan">
+
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="m-t-30"><img src="https://www.wrraptheme.com/templates/lucid/html/assets/images/logo-icon.svg"
+                    width="48" height="48" alt="Lucid"></div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+    <!-- Overlay For Sidebars -->
+
+    <div id="wrapper">
+
+        <nav class="navbar navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-btn">
+                    <button type="button" class="btn-toggle-offcanvas"><i class="lnr lnr-menu fa fa-bars"></i></button>
+                </div>
+
+                <div class="navbar-brand">
+                    <a href="index.html"><img
+                            src="https://www.wrraptheme.com/templates/lucid/html/assets/images/logo.svg"
+                            alt="Lucid Logo" class="img-responsive logo"></a>
+                </div>
+
+                <div class="navbar-right">
+                    <div id="navbar-menu">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a href="available-stock.html" class="btn btn-default">
+                                    <i class="fa fa-line-chart"></i>
+                                    <span>Available Stock</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="pre-order.html" class="btn btn-default">
+                                    <i class="fa fa-cart-plus"></i>
+                                    <span>Pre-Orders</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="pre-sale.html" class="btn btn-default">
+                                    <i class="fa fa-opencart"></i>
+                                    <span>Pre-Sales</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="purchase.html" class="btn btn-default">
+                                    <i class="fa fa-cart-arrow-down"></i>
+                                    <span>Purchasing</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="icon-menu"><i class="icon-login"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div id="left-sidebar" class="sidebar mini-sidebar">
+            <div class="sidebar-scroll">
+                <!-- User Account Info -->
+                <div class="user-account">
+                    <img src="images/user.png" class="rounded-circle user-photo" alt="User Profile Picture">
+                    <div class="dropdown">
+                        <span>Welcome,</span>
+                        <a href="javascript:void(0);" class="dropdown-toggle user-name"
+                            data-toggle="dropdown"><strong>Alizee Thomas</strong></a>
+                        <ul class="dropdown-menu dropdown-menu-right account">
+                            <li><a href="#"><i class="icon-user"></i>My Profile</a></li>
+                            <li><a href="#"><i class="icon-envelope-open"></i>Messages</a></li>
+                            <li><a href="javascript:void(0);"><i class="icon-settings"></i>Settings</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#"><i class="icon-power"></i>Logout</a></li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <ul class="row list-unstyled">
+                        <li class="col-4">
+                            <small>Sales</small>
+                            <h6>456</h6>
+                        </li>
+                        <li class="col-4">
+                            <small>Order</small>
+                            <h6>1350</h6>
+                        </li>
+                        <li class="col-4">
+                            <small>Revenue</small>
+                            <h6>$2.13B</h6>
+                        </li>
+                    </ul>
+                </div>
+                <hr>
+
+                <!-- Navigation Tabs -->
+                <ul class="nav nav-tabs">
+                    <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Chat"><i
+                                class="icon-book-open"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#setting"><i
+                                class="icon-settings"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#question"><i
+                                class="icon-question"></i></a></li>
+                </ul>
+
+                <!-- Tab Panes -->
+                <div class="tab-content p-l-0 p-r-0">
+                    <!-- Menu Tab Content -->
+                    <div class="tab-pane active" id="menu">
+                        <nav id="left-sidebar-nav" class="sidebar-nav">
+                            <ul id="main-menu" class="metismenu">
+                                <li>
+                                    <a href="#" class="has-arrow">
+                                        <i class="fa fa-line-chart"></i> 
+                                        <span>Available Stock</span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="available-stock.html">All Stock</a></li>
+                                        <li><a href="add-stock.html">Add Stock</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="has-arrow">
+                                        <i class="fa fa-cart-plus"></i>
+                                        <span>Pre-Orders</span></a>
+                                    <ul>
+                                        <li><a href="pre-order.html">Pre-Orders</a></li>
+                                        <li><a href="add-pre-order.html">Add Pre-Order</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="has-arrow">
+                                        <i class="fa fa-opencart"></i>
+                                        <span>Pre-Sales</span></a>
+                                    <ul>
+                                        <li><a href="pre-sale.html">Pre-Sales</a></li>
+                                        <li><a href="add-pre-sale.html">Add Pre-Sale</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="has-arrow">
+                                        <i class="fa fa-cart-arrow-down"></i>
+                                        <span>Purchasing</span></a>
+                                    <ul>
+                                        <li><a href="purchase.html">All Purchases</a></li>
+                                        <li><a href="#">Add Purchase Order</a></li>
+                                    </ul>
+                                </li>
+                                <li class="active">
+                                    <a href="#" class="has-arrow">
+                                        <i class="fa fa-cogs"></i>
+                                        <span>Product Options</span></a>
+                                    <ul>
+                                        <li>
+                                            <a href="add-product-options.html">
+                                                Add Product Options
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="category.html">Category</a>
+                                        </li>
+                                        <li class="active">
+                                            <a href="color.html">Color</a>
+                                        </li>
+                                        <li>
+                                            <a href="farm.html">Farm</a>
+                                        </li>
+                                        <li>
+                                            <a href="box-type.html">Box Type</a>
+                                        </li>
+                                    </ul>
+                                </li>
+       
+                                <li>
+                                    <a href="#" class="has-arrow">
+                                        <i class="icon-user-follow"></i> 
+                                        <span> Customer Management</span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="customer.html">View Customers</a></li>
+                                        <li><a href="#">Add Customer</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="has-arrow">
+                                        <i class="fa fa-truck"></i> 
+                                        <span>Shipping Management</span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="#">View Shipments</a></li>
+                                        <li><a href="#">Add Shipment</a></li>
+                                        <li><a href="#">Shipping Reports</a></li>
+                                    </ul>
+                                </li>
+
+                                <!-- Menu Item: Reports -->
+                                <li>
+                                    <a href="#" class="has-arrow">
+                                        <i class="fa fa-bar-chart"></i>
+                                        <span>Reports</span></a>
+                                    <ul>
+                                        <li><a href="#">Sales Reports</a></li>
+                                        <li><a href="#">Stock Reports</a></li>
+                                        <li><a href="#">Order Reports</a></li>
+                                        <li><a href="#">Purchase Reports</a></li>
+                                        <li><a href="#">User Reports</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="has-arrow">
+                                        <i class=" icon-settings"></i>
+                                        <span>Settings</span></a>
+                                    <ul>
+                                        <li><a href="#">General Settings</a></li>
+                                        <li><a href="#">Payment Settings</a></li>
+                                        <li><a href="#">Shipping Settings</a></li>
+                                        <li><a href="#">Notification Settings</a></li>
+                                        <li><a href="#">System Settings</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="main-content">
+            <div class="container-fluid">
+                <div class="block-header">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-8 col-sm-12">
+                            <h2><a href="javascript:void(0);" class="btn btn-xs btn-link btn-toggle-fullwidth"><i
+                                        class="fa fa-arrow-left"></i></a>Product Options</h2>
+                            <ul class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#"><i class="icon-home"></i></a></li>
+                                <li class="breadcrumb-item active">Colors Table</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-7 col-md-4 col-sm-12 text-right">
+                            <div class="inlineblock text-center m-r-15 m-l-15 hidden-sm">
+                                <div class="text-left" style="visibility: hidden;" data-type="line" data-width="8em"
+                                    data-height="20px" data-line-Width="1" data-line-Color="#f4516c"
+                                    data-fill-Color="transparent">
+                                    4,6,3,2,5,6,5,4
+                                </div>
+                                <span>
+                                    <a href="add-product-options.html" class="btn bnt-sm btn-info">Add Color</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row clearfix">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div id="myGrid" style="width: 100%; height: 400px" class="ag-theme-quartz">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Javascript -->
+    <script src="js/libscripts.bundle.js"></script>
+    <script src="js/vendorscripts.bundle.js"></script>
+    <script src="js/mainscripts.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.js"></script>
+
+    <script>
+        // Row Data Interface
+
+        // Grid API: Access to Grid API methods
+        let gridApi;
+
+        // Grid Options: Contains all of the grid configurations
+        const gridOptions = {
+            rowData: [
+                { color: "#F0F8FF", colorName: "AliceBlue" },
+                { color: "#FAEBD7", colorName: "AntiqueWhite" },
+                { color: "#00FFFF", colorName: "Aqua" },
+                { color: "#7FFFD4", colorName: "Aquamarine" },
+                { color: "#F0FFFF", colorName: "Azure" },
+                { color: "#F5F5DC", colorName: "Beige" },
+                { color: "#FFE4C4", colorName: "Bisque" },
+                { color: "#000000", colorName: "Black" },
+                { color: "#FFEBCD", colorName: "BlanchedAlmond" },
+                { color: "#0000FF", colorName: "Blue" },
+                { color: "#8A2BE2", colorName: "BlueViolet" },
+                { color: "#A52A2A", colorName: "Brown" },
+                { color: "#DEB887", colorName: "BurlyWood" },
+                { color: "#5F9EA0", colorName: "CadetBlue" },
+                { color: "#7FFF00", colorName: "Chartreuse" },
+                { color: "#D2691E", colorName: "Chocolate" },
+                { color: "#FF7F50", colorName: "Coral" },
+                { color: "#6495ED", colorName: "CornflowerBlue" },
+                { color: "#FFF8DC", colorName: "Cornsilk" },
+                { color: "#DC143C", colorName: "Crimson" },
+                { color: "#00FFFF", colorName: "Cyan" },
+                { color: "#00008B", colorName: "DarkBlue" },
+                { color: "#008B8B", colorName: "DarkCyan" },
+                { color: "#B8860B", colorName: "DarkGoldenRod" },
+                { color: "#A9A9A9", colorName: "DarkGray" },
+                { color: "#006400", colorName: "DarkGreen" },
+                { color: "#BDB76B", colorName: "DarkKhaki" },
+                { color: "#8B008B", colorName: "DarkMagenta" },
+                { color: "#556B2F", colorName: "DarkOliveGreen" },
+                { color: "#FF8C00", colorName: "DarkOrange" },
+                { color: "#9932CC", colorName: "DarkOrchid" },
+                { color: "#8B0000", colorName: "DarkRed" },
+                { color: "#E9967A", colorName: "DarkSalmon" },
+                { color: "#8FBC8F", colorName: "DarkSeaGreen" },
+                { color: "#483D8B", colorName: "DarkSlateBlue" },
+                { color: "#2F4F4F", colorName: "DarkSlateGray" },
+                { color: "#00CED1", colorName: "DarkTurquoise" },
+                { color: "#9400D3", colorName: "DarkViolet" },
+                { color: "#FF1493", colorName: "DeepPink" },
+                { color: "#00BFFF", colorName: "DeepSkyBlue" },
+                { color: "#696969", colorName: "DimGray" },
+                { color: "#1E90FF", colorName: "DodgerBlue" },
+                { color: "#B22222", colorName: "FireBrick" },
+                { color: "#FFFAF0", colorName: "FloralWhite" },
+                { color: "#228B22", colorName: "ForestGreen" },
+                { color: "#FF00FF", colorName: "Fuchsia" },
+                { color: "#DCDCDC", colorName: "Gainsboro" },
+                { color: "#F8F8FF", colorName: "GhostWhite" },
+                { color: "#FFD700", colorName: "Gold" },
+                { color: "#DAA520", colorName: "GoldenRod" },
+                { color: "#808080", colorName: "Gray" },
+                { color: "#008000", colorName: "Green" },
+                { color: "#ADFF2F", colorName: "GreenYellow" },
+                { color: "#F0FFF0", colorName: "HoneyDew" },
+                { color: "#FF69B4", colorName: "HotPink" },
+                { color: "#CD5C5C", colorName: "IndianRed" },
+                { color: "#4B0082", colorName: "Indigo" },
+                { color: "#FFFFF0", colorName: "Ivory" },
+                { color: "#F0E68C", colorName: "Khaki" },
+                { color: "#E6E6FA", colorName: "Lavender" },
+                { color: "#FFF0F5", colorName: "LavenderBlush" },
+                { color: "#7CFC00", colorName: "LawnGreen" },
+                { color: "#FFFACD", colorName: "LemonChiffon" },
+                { color: "#ADD8E6", colorName: "LightBlue" },
+                { color: "#F08080", colorName: "LightCoral" },
+                { color: "#E0FFFF", colorName: "LightCyan" },
+                { color: "#FAFAD2", colorName: "LightGoldenRodYellow" },
+                { color: "#D3D3D3", colorName: "LightGray" },
+                { color: "#90EE90", colorName: "LightGreen" },
+                { color: "#FFB6C1", colorName: "LightPink" },
+                { color: "#FFA07A", colorName: "LightSalmon" },
+                { color: "#20B2AA", colorName: "LightSeaGreen" },
+                { color: "#87CEFA", colorName: "LightSkyBlue" },
+                { color: "#778899", colorName: "LightSlateGray" },
+                { color: "#B0C4DE", colorName: "LightSteelBlue" },
+                { color: "#FFFFE0", colorName: "LightYellow" },
+                { color: "#00FF00", colorName: "Lime" },
+                { color: "#32CD32", colorName: "LimeGreen" },
+                { color: "#FAF0E6", colorName: "Linen" },
+                { color: "#FF00FF", colorName: "Magenta" },
+                { color: "#800000", colorName: "Maroon" },
+                { color: "#66CDAA", colorName: "MediumAquaMarine" },
+                { color: "#0000CD", colorName: "MediumBlue" },
+                { color: "#BA55D3", colorName: "MediumOrchid" },
+                { color: "#9370DB", colorName: "MediumPurple" },
+                { color: "#3CB371", colorName: "MediumSeaGreen" },
+                { color: "#7B68EE", colorName: "MediumSlateBlue" },
+                { color: "#00FA9A", colorName: "MediumSpringGreen" },
+                { color: "#48D1CC", colorName: "MediumTurquoise" },
+                { color: "#C71585", colorName: "MediumVioletRed" },
+                { color: "#191970", colorName: "MidnightBlue" },
+                { color: "#F5FFFA", colorName: "MintCream" },
+                { color: "#FFE4E1", colorName: "MistyRose" },
+                { color: "#FFE4B5", colorName: "Moccasin" },
+                { color: "#FFDEAD", colorName: "NavajoWhite" },
+                { color: "#000080", colorName: "Navy" },
+                { color: "#FDF5E6", colorName: "OldLace" },
+                { color: "#808000", colorName: "Olive" },
+                { color: "#6B8E23", colorName: "OliveDrab" },
+                { color: "#FFA500", colorName: "Orange" },
+                { color: "#FF4500", colorName: "OrangeRed" },
+                { color: "#DA70D6", colorName: "Orchid" },
+                { color: "#EEE8AA", colorName: "PaleGoldenRod" },
+                { color: "#98FB98", colorName: "PaleGreen" },
+                { color: "#AFEEEE", colorName: "PaleTurquoise" },
+                { color: "#DB7093", colorName: "PaleVioletRed" },
+                { color: "#FFEFD5", colorName: "PapayaWhip" },
+                { color: "#FFDAB9", colorName: "PeachPuff" },
+                { color: "#CD853F", colorName: "Peru" },
+                { color: "#FFC0CB", colorName: "Pink" },
+                { color: "#DDA0DD", colorName: "Plum" },
+                { color: "#B0E0E6", colorName: "PowderBlue" },
+                { color: "#800080", colorName: "Purple" },
+                { color: "#FF0000", colorName: "Red" },
+                { color: "#BC8F8F", colorName: "RosyBrown" },
+                { color: "#4169E1", colorName: "RoyalBlue" },
+                { color: "#8B4513", colorName: "SaddleBrown" },
+                { color: "#FA8072", colorName: "Salmon" },
+                { color: "#F4A460", colorName: "SandyBrown" },
+                { color: "#2E8B57", colorName: "SeaGreen" },
+                { color: "#FFF5EE", colorName: "SeaShell" },
+                { color: "#A0522D", colorName: "Sienna" },
+                { color: "#C0C0C0", colorName: "Silver" },
+                { color: "#87CEEB", colorName: "SkyBlue" },
+                { color: "#6A5ACD", colorName: "SlateBlue" },
+                { color: "#708090", colorName: "SlateGray" },
+                { color: "#FFFAFA", colorName: "Snow" },
+                { color: "#00FF7F", colorName: "SpringGreen" },
+                { color: "#4682B4", colorName: "SteelBlue" },
+                { color: "#D2B48C", colorName: "Tan" },
+                { color: "#008080", colorName: "Teal" },
+                { color: "#D8BFD8", colorName: "Thistle" },
+                { color: "#FF6347", colorName: "Tomato" },
+                { color: "#40E0D0", colorName: "Turquoise" },
+                { color: "#EE82EE", colorName: "Violet" },
+                { color: "#F5DEB3", colorName: "Wheat" },
+                { color: "#FFFFFF", colorName: "White" },
+                { color: "#F5F5F5", colorName: "WhiteSmoke" },
+                { color: "#FFFF00", colorName: "Yellow" },
+                { color: "#9ACD32", colorName: "YellowGreen" },
+            ],
+
+            columnDefs: [
+                {
+                    headerName: "Color Code",
+                    field: "color",
+                    cellRenderer: function (params) {
+                        return `<button class="btn btn-sm" style="background-color: ${params.value}">
+                                ${params.value}
+                               </button>`;
+                    }
+                },
+                {
+                    headerName: "Color Name",
+                    field: "colorName"
+                },
+            ],
+            defaultColDef: {
+                flex: 1,
+                autoSizeStrategy: {
+                    type: 'fitGridWidth',
+                },
+                filter: "agTextColumnFilter",
+                floatingFilter: true,
+            },
+            animateRows: true,
+            pagination: true,
+            paginationPageSize: 20,
+        };
+        gridApi = agGrid.createGrid(document.querySelector("#myGrid"), gridOptions);
+    </script>
+</body>
+
+</html>

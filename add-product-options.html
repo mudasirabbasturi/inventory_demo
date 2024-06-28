@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>:: Inventory Demo :: Home</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="Lucid Bootstrap 4.1.1 Admin Template">
+    <meta name="author" content="WrapTheme, design by: ThemeMakker.com">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- VENDOR CSS -->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fonts/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-multiselect.css">
+    <link rel="stylesheet" href="css/multi-select.css">
+    <link rel="stylesheet" href="css/select2.css">
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/color_skins.css">
+    <style>
+        .addStock label {
+            font-weight: 400;
+            padding-left: 10px;
+            position: relative;
+        }
+
+        .addStock label::after {
+            position: absolute;
+            content: "\f101";
+            font-family: "FontAwesome";
+            left: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            color: orangered;
+        }
+
+        .addStock label::before {
+            position: absolute;
+            content: "\f103";
+            font-family: "FontAwesome";
+            right: -10px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            color: orangered;
+        }
+    </style>
+</head>
+
+<body class="theme-cyan">
+
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="m-t-30"><img src="https://www.wrraptheme.com/templates/lucid/html/assets/images/logo-icon.svg"
+                    width="48" height="48" alt="Lucid"></div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+    <!-- Overlay For Sidebars -->
+
+    <div id="wrapper">
+
+        <nav class="navbar navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-btn">
+                    <button type="button" class="btn-toggle-offcanvas"><i class="lnr lnr-menu fa fa-bars"></i></button>
+                </div>
+
+                <div class="navbar-brand">
+                    <a href="index.html"><img
+                            src="https://www.wrraptheme.com/templates/lucid/html/assets/images/logo.svg"
+                            alt="Lucid Logo" class="img-responsive logo"></a>
+                </div>
+
+                <div class="navbar-right">
+                    <div id="navbar-menu">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a href="available-stock.html" class="btn btn-default">
+                                    <i class="fa fa-line-chart"></i>
+                                    <span>Available Stock</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="pre-order.html" class="btn btn-default">
+                                    <i class="fa fa-cart-plus"></i>
+                                    <span>Pre-Orders</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="pre-sale.html" class="btn btn-default">
+                                    <i class="fa fa-opencart"></i>
+                                    <span>Pre-Sales</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="purchase.html" class="btn btn-default">
+                                    <i class="fa fa-cart-arrow-down"></i>
+                                    <span>Purchasing</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="icon-menu"><i class="icon-login"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div id="left-sidebar" class="sidebar mini-sidebar">
+            <div class="sidebar-scroll">
+                <!-- User Account Info -->
+                <div class="user-account">
+                    <img src="images/user.png" class="rounded-circle user-photo" alt="User Profile Picture">
+                    <div class="dropdown">
+                        <span>Welcome,</span>
+                        <a href="javascript:void(0);" class="dropdown-toggle user-name"
+                            data-toggle="dropdown"><strong>Alizee Thomas</strong></a>
+                        <ul class="dropdown-menu dropdown-menu-right account">
+                            <li><a href="#"><i class="icon-user"></i>My Profile</a></li>
+                            <li><a href="#"><i class="icon-envelope-open"></i>Messages</a></li>
+                            <li><a href="javascript:void(0);"><i class="icon-settings"></i>Settings</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#"><i class="icon-power"></i>Logout</a></li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <ul class="row list-unstyled">
+                        <li class="col-4">
+                            <small>Sales</small>
+                            <h6>456</h6>
+                        </li>
+                        <li class="col-4">
+                            <small>Order</small>
+                            <h6>1350</h6>
+                        </li>
+                        <li class="col-4">
+                            <small>Revenue</small>
+                            <h6>$2.13B</h6>
+                        </li>
+                    </ul>
+                </div>
+                <hr>
+
+                <!-- Navigation Tabs -->
+                <ul class="nav nav-tabs">
+                    <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Chat"><i
+                                class="icon-book-open"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#setting"><i
+                                class="icon-settings"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#question"><i
+                                class="icon-question"></i></a></li>
+                </ul>
+
+                <!-- Tab Panes -->
+                <div class="tab-content p-l-0 p-r-0">
+                    <!-- Menu Tab Content -->
+                    <div class="tab-pane active" id="menu">
+                        <nav id="left-sidebar-nav" class="sidebar-nav">
+                            <ul id="main-menu" class="metismenu">
+                                <li>
+                                    <a href="#" class="has-arrow">
+                                        <i class="fa fa-line-chart"></i> 
+                                        <span>Available Stock</span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="available-stock.html">All Stock</a></li>
+                                        <li><a href="add-stock.html">Add Stock</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="has-arrow">
+                                        <i class="fa fa-cart-plus"></i>
+                                        <span>Pre-Orders</span></a>
+                                    <ul>
+                                        <li><a href="pre-order.html">Pre-Orders</a></li>
+                                        <li><a href="add-pre-order.html">Add Pre-Order</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="has-arrow">
+                                        <i class="fa fa-opencart"></i>
+                                        <span>Pre-Sales</span></a>
+                                    <ul>
+                                        <li><a href="pre-sale.html">Pre-Sales</a></li>
+                                        <li><a href="add-pre-sale.html">Add Pre-Sale</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="has-arrow">
+                                        <i class="fa fa-cart-arrow-down"></i>
+                                        <span>Purchasing</span></a>
+                                    <ul>
+                                        <li><a href="purchase.html">All Purchases</a></li>
+                                        <li><a href="#">Add Purchase Order</a></li>
+                                    </ul>
+                                </li>
+                                <li class="active">
+                                    <a href="#" class="has-arrow">
+                                        <i class="fa fa-cogs"></i>
+                                        <span>Product Options</span></a>
+                                    <ul>
+                                        <li class="active">
+                                            <a href="add-product-options.html">
+                                                Add Product Options
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="category.html">Category</a>
+                                        </li>
+                                        <li>
+                                            <a href="color.html">Color</a>
+                                        </li>
+                                        <li>
+                                            <a href="farm.html">Farm</a>
+                                        </li>
+                                        <li>
+                                            <a href="box-type.html">Box Type</a>
+                                        </li>
+                                    </ul>
+                                </li>
+       
+                                <li>
+                                    <a href="#" class="has-arrow">
+                                        <i class="icon-user-follow"></i> 
+                                        <span> Customer Management</span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="customer.html">View Customers</a></li>
+                                        <li><a href="#">Add Customer</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="has-arrow">
+                                        <i class="fa fa-truck"></i> 
+                                        <span>Shipping Management</span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="#">View Shipments</a></li>
+                                        <li><a href="#">Add Shipment</a></li>
+                                        <li><a href="#">Shipping Reports</a></li>
+                                    </ul>
+                                </li>
+
+                                <!-- Menu Item: Reports -->
+                                <li>
+                                    <a href="#" class="has-arrow">
+                                        <i class="fa fa-bar-chart"></i>
+                                        <span>Reports</span></a>
+                                    <ul>
+                                        <li><a href="#">Sales Reports</a></li>
+                                        <li><a href="#">Stock Reports</a></li>
+                                        <li><a href="#">Order Reports</a></li>
+                                        <li><a href="#">Purchase Reports</a></li>
+                                        <li><a href="#">User Reports</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="has-arrow">
+                                        <i class=" icon-settings"></i>
+                                        <span>Settings</span></a>
+                                    <ul>
+                                        <li><a href="#">General Settings</a></li>
+                                        <li><a href="#">Payment Settings</a></li>
+                                        <li><a href="#">Shipping Settings</a></li>
+                                        <li><a href="#">Notification Settings</a></li>
+                                        <li><a href="#">System Settings</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="main-content">
+            <div class="container-fluid">
+                <div class="block-header">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-8 col-sm-12">
+                            <h2><a href="javascript:void(0);" class="btn btn-xs btn-link btn-toggle-fullwidth"><i
+                                        class="fa fa-arrow-left"></i></a>Product Options</h2>
+                            <ul class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#"><i class="icon-home"></i></a></li>
+                                <li class="breadcrumb-item active">Add Category, Color, Farm, Box Type</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-7 col-md-4 col-sm-12 text-right">
+                            <div class="inlineblock text-center m-r-15 m-l-15 hidden-sm">
+                                <div class="sparkline text-left" data-type="line" data-width="8em" data-height="20px"
+                                    data-line-Width="1" data-line-Color="#00c5dc" data-fill-Color="transparent">
+                                    3,5,1,6,5,4,8,3</div>
+                                <span>Visitors</span>
+                            </div>
+                            <div class="inlineblock text-center m-r-15 m-l-15 hidden-sm">
+                                <div class="sparkline text-left" data-type="line" data-width="8em" data-height="20px"
+                                    data-line-Width="1" data-line-Color="#f4516c" data-fill-Color="transparent">
+                                    4,6,3,2,5,6,5,4</div>
+                                <span>Visits</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row clearfix">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <form class="addStock">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-sm-12">
+                                            <div class="form-group">
+                                                <label for="productDesc">Add Category:</label>
+                                                <input type="text" class="form-control" id="productDesc">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="productDesc">Sub-Category:</label>
+                                                <select id="categorySelect" class="form-control show-tick ms select2"
+                                                    data-placeholder="Select">
+                                                    <option value="">Default(none)</option>
+                                                    <option value="Alstroemeria">Alstroemeria</option>
+                                                    <option value="Aster">Aster</option>
+                                                    <option value="Carnation">Carnation</option>
+                                                    <option value="Consumer Bunch Roses">Consumer Bunch Roses</option>
+                                                    <option value="Delphinium">Delphinium</option>
+                                                    <option value="Hydrangea">Hydrangea</option>
+                                                    <option value="Pompon">Pompon</option>
+                                                    <option value="Roses">Roses</option>
+                                                    <option value="Spider">Spider</option>
+                                                    <option value="Spray Roses">Spray Roses</option>
+                                                    <option value="Stock">Stock</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <button class="btn btn-sm btn-info">
+                                                    Add Category.
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-12">
+                                            <div class="form-group">
+                                                <label for="productDesc">Standar Color:</label>
+                                                <select id="categorySelect" class="form-control show-tick ms select2"
+                                                    data-placeholder="Select">
+                                                    <option value="">Select Color</option>
+                                                    <option value="AliceBlue">AliceBlue</option>
+                                                    <option value="AntiqueWhite">AntiqueWhite</option>
+                                                    <option value="Aqua">Aqua</option>
+                                                    <option value="Aquamarine">Aquamarine</option>
+                                                    <option value="Azure">Azure</option>
+                                                    <option value="Beige">Beige</option>
+                                                    <option value="Bisque">Bisque</option>
+                                                    <option value="Black">Black</option>
+                                                    <option value="BlanchedAlmond">BlanchedAlmond</option>
+                                                    <option value="Blue">Blue</option>
+                                                    <option value="BlueViolet">BlueViolet</option>
+                                                    <option value="Brown">Brown</option>
+                                                    <option value="BurlyWood">BurlyWood</option>
+                                                    <option value="CadetBlue">CadetBlue</option>
+                                                    <option value="Chartreuse">Chartreuse</option>
+                                                    <option value="Chocolate">Chocolate</option>
+                                                    <option value="Coral">Coral</option>
+                                                    <option value="CornflowerBlue">CornflowerBlue</option>
+                                                    <option value="Cornsilk">Cornsilk</option>
+                                                    <option value="Crimson">Crimson</option>
+                                                    <option value="Cyan">Cyan</option>
+                                                    <option value="DarkBlue">DarkBlue</option>
+                                                    <option value="DarkCyan">DarkCyan</option>
+                                                    <option value="DarkGoldenRod">DarkGoldenRod</option>
+                                                    <option value="DarkGray">DarkGray</option>
+                                                    <option value="DarkGreen">DarkGreen</option>
+                                                    <option value="DarkKhaki">DarkKhaki</option>
+                                                    <option value="DarkMagenta">DarkMagenta</option>
+                                                    <option value="DarkOliveGreen">DarkOliveGreen</option>
+                                                    <option value="DarkOrange">DarkOrange</option>
+                                                    <option value="DarkOrchid">DarkOrchid</option>
+                                                    <option value="DarkRed">DarkRed</option>
+                                                    <option value="DarkSalmon">DarkSalmon</option>
+                                                    <option value="DarkSeaGreen">DarkSeaGreen</option>
+                                                    <option value="DarkSlateBlue">DarkSlateBlue</option>
+                                                    <option value="DarkSlateGray">DarkSlateGray</option>
+                                                    <option value="DarkTurquoise">DarkTurquoise</option>
+                                                    <option value="DarkViolet">DarkViolet</option>
+                                                    <option value="DeepPink">DeepPink</option>
+                                                    <option value="DeepSkyBlue">DeepSkyBlue</option>
+                                                    <option value="DimGray">DimGray</option>
+                                                    <option value="DodgerBlue">DodgerBlue</option>
+                                                    <option value="FireBrick">FireBrick</option>
+                                                    <option value="FloralWhite">FloralWhite</option>
+                                                    <option value="ForestGreen">ForestGreen</option>
+                                                    <option value="Fuchsia">Fuchsia</option>
+                                                    <option value="Gainsboro">Gainsboro</option>
+                                                    <option value="GhostWhite">GhostWhite</option>
+                                                    <option value="Gold">Gold</option>
+                                                    <option value="GoldenRod">GoldenRod</option>
+                                                    <option value="Gray">Gray</option>
+                                                    <option value="Green">Green</option>
+                                                    <option value="GreenYellow">GreenYellow</option>
+                                                    <option value="HoneyDew">HoneyDew</option>
+                                                    <option value="HotPink">HotPink</option>
+                                                    <option value="IndianRed">IndianRed</option>
+                                                    <option value="Indigo">Indigo</option>
+                                                    <option value="Ivory">Ivory</option>
+                                                    <option value="Khaki">Khaki</option>
+                                                    <option value="Lavender">Lavender</option>
+                                                    <option value="LavenderBlush">LavenderBlush</option>
+                                                    <option value="LawnGreen">LawnGreen</option>
+                                                    <option value="LemonChiffon">LemonChiffon</option>
+                                                    <option value="LightBlue">LightBlue</option>
+                                                    <option value="LightCoral">LightCoral</option>
+                                                    <option value="LightCyan">LightCyan</option>
+                                                    <option value="LightGoldenRodYellow">LightGoldenRodYellow</option>
+                                                    <option value="LightGray">LightGray</option>
+                                                    <option value="LightGreen">LightGreen</option>
+                                                    <option value="LightPink">LightPink</option>
+                                                    <option value="LightSalmon">LightSalmon</option>
+                                                    <option value="LightSeaGreen">LightSeaGreen</option>
+                                                    <option value="LightSkyBlue">LightSkyBlue</option>
+                                                    <option value="LightSlateGray">LightSlateGray</option>
+                                                    <option value="LightSteelBlue">LightSteelBlue</option>
+                                                    <option value="LightYellow">LightYellow</option>
+                                                    <option value="Lime">Lime</option>
+                                                    <option value="LimeGreen">LimeGreen</option>
+                                                    <option value="Linen">Linen</option>
+                                                    <option value="Magenta">Magenta</option>
+                                                    <option value="Maroon">Maroon</option>
+                                                    <option value="MediumAquaMarine">MediumAquaMarine</option>
+                                                    <option value="MediumBlue">MediumBlue</option>
+                                                    <option value="MediumOrchid">MediumOrchid</option>
+                                                    <option value="MediumPurple">MediumPurple</option>
+                                                    <option value="MediumSeaGreen">MediumSeaGreen</option>
+                                                    <option value="MediumSlateBlue">MediumSlateBlue</option>
+                                                    <option value="MediumSpringGreen">MediumSpringGreen</option>
+                                                    <option value="MediumTurquoise">MediumTurquoise</option>
+                                                    <option value="MediumVioletRed">MediumVioletRed</option>
+                                                    <option value="MidnightBlue">MidnightBlue</option>
+                                                    <option value="MintCream">MintCream</option>
+                                                    <option value="MistyRose">MistyRose</option>
+                                                    <option value="Moccasin">Moccasin</option>
+                                                    <option value="NavajoWhite">NavajoWhite</option>
+                                                    <option value="Navy">Navy</option>
+                                                    <option value="OldLace">OldLace</option>
+                                                    <option value="Olive">Olive</option>
+                                                    <option value="OliveDrab">OliveDrab</option>
+                                                    <option value="Orange">Orange</option>
+                                                    <option value="OrangeRed">OrangeRed</option>
+                                                    <option value="Orchid">Orchid</option>
+                                                    <option value="PaleGoldenRod">PaleGoldenRod</option>
+                                                    <option value="PaleGreen">PaleGreen</option>
+                                                    <option value="PaleTurquoise">PaleTurquoise</option>
+                                                    <option value="PaleVioletRed">PaleVioletRed</option>
+                                                    <option value="PapayaWhip">PapayaWhip</option>
+                                                    <option value="PeachPuff">PeachPuff</option>
+                                                    <option value="Peru">Peru</option>
+                                                    <option value="Pink">Pink</option>
+                                                    <option value="Plum">Plum</option>
+                                                    <option value="PowderBlue">PowderBlue</option>
+                                                    <option value="Purple">Purple</option>
+                                                    <option value="Red">Red</option>
+                                                    <option value="RosyBrown">RosyBrown</option>
+                                                    <option value="RoyalBlue">RoyalBlue</option>
+                                                    <option value="SaddleBrown">SaddleBrown</option>
+                                                    <option value="Salmon">Salmon</option>
+                                                    <option value="SandyBrown">SandyBrown</option>
+                                                    <option value="SeaGreen">SeaGreen</option>
+                                                    <option value="SeaShell">SeaShell</option>
+                                                    <option value="Sienna">Sienna</option>
+                                                    <option value="Silver">Silver</option>
+                                                    <option value="SkyBlue">SkyBlue</option>
+                                                    <option value="SlateBlue">SlateBlue</option>
+                                                    <option value="SlateGray">SlateGray</option>
+                                                    <option value="Snow">Snow</option>
+                                                    <option value="SpringGreen">SpringGreen</option>
+                                                    <option value="SteelBlue">SteelBlue</option>
+                                                    <option value="Tan">Tan</option>
+                                                    <option value="Teal">Teal</option>
+                                                    <option value="Thistle">Thistle</option>
+                                                    <option value="Tomato">Tomato</option>
+                                                    <option value="Turquoise">Turquoise</option>
+                                                    <option value="Violet">Violet</option>
+                                                    <option value="Wheat">Wheat</option>
+                                                    <option value="White">White</option>
+                                                    <option value="WhiteSmoke">WhiteSmoke</option>
+                                                    <option value="Yellow">Yellow</option>
+                                                    <option value="YellowGreen">YellowGreen</option>
+                                                    <option value="Alstroemeria">Alstroemeria</option>
+                                                    <option value="Aster">Aster</option>
+                                                    <option value="Carnation">Carnation</option>
+                                                    <option value="Consumer Bunch Roses">Consumer Bunch Roses</option>
+                                                    <option value="Delphinium">Delphinium</option>
+                                                    <option value="Hydrangea">Hydrangea</option>
+                                                    <option value="Pompon">Pompon</option>
+                                                    <option value="Roses">Roses</option>
+                                                    <option value="Spider">Spider</option>
+                                                    <option value="Spray Roses">Spray Roses</option>
+                                                    <option value="Stock">Stock</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="color">Did Not found above ? Add Color Here:</label>
+                                                <input type="text" class="form-control" id="color">
+                                            </div>
+                                            <div class="form-group">
+                                                <button class="btn btn-sm btn-info">
+                                                    Add Color.
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-12">
+                                            <div class="form-group">
+                                                <label for="">Select Box Type</label>
+                                                <select id="categorySelect" class="form-control show-tick ms select2"
+                                                    data-placeholder="Select">
+                                                    <option value="">Select Option</option>
+                                                    <option value="">Half(1/2)</option>
+                                                    <option value="">Quarter(1/4)</option>
+                                                    <option value="">eighth(1/8)</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="">If Not found in above (add new value)</label>
+                                                <input type="text" name="" placeholder="add new Box Type"
+                                                    class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <button class="btn btn-sm btn-info">
+                                                    Add Box Type.
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-sm-12">
+                                            <div class="form-group">
+                                                <label for="">Add Farm Name</label>
+                                                <input type="text" name="" placeholder="Farm Name" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <button class="btn btn-sm btn-info">
+                                                    Add Farm.
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Javascript -->
+    <script src="js/libscripts.bundle.js"></script>
+    <script src="js/vendorscripts.bundle.js"></script>
+    <script src="js/jquery.multi-select.js"></script>
+    <script src="js/bootstrap/bootstrap-multiselect.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/mainscripts.bundle.js"></script>
+    <script src="js/advanced-form-elements.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>:: Inventory Demo :: Home</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="Lucid Bootstrap 4.1.1 Admin Template">
+    <meta name="author" content="WrapTheme, design by: ThemeMakker.com">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- VENDOR CSS -->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap-multiselect.css">
+    <link rel="stylesheet" href="css/multi-select.css">
+    <link rel="stylesheet" href="css/select2.css">
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/color_skins.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ag-grid-community@31.3.2/styles/ag-grid.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ag-grid-community@31.3.2/styles/ag-theme-quartz.css" />
+
+    <style>
+        /* body {
+            overflow: hidden;
+        } */
+
+        /* #left-sidebar {
+            width: 200px;
+        }
+
+        #main-content {
+            width: calc(100% - 200px);
+            padding-left: 0px !important;
+        }
+
+        .metismenu>li i {
+            margin-right: 10px !important;
+        } */
+
+        .ag-theme-quartz .ag-header {
+            font-family: "Ubuntu", sans-serif;
+        }
+
+        .ag-theme-quartz .ag-header-group-cell {
+            font-size: 11px;
+        }
+
+        .ag-theme-quartz .ag-header-cell {
+            font-size: 12px;
+        }
+
+        .ag-theme-quartz .ag-cell {
+            font-size: 12px;
+        }
+
+        .ag-header-cell-label {
+            white-space: normal !important;
+            word-wrap: break-word !important;
+        }
+
+        .new_order h2 {
+            position: relative;
+            font-size: 14px;
+            padding-left: 10px;
+            display: inline-block;
+        }
+
+        .new_order h2::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+            width: 3px;
+            height: 100%;
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body class="theme-cyan layout-fullwidth">
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="m-t-30">
+                <img src="https://www.wrraptheme.com/templates/lucid/html/assets/images/logo-icon.svg" width="48"
+                    height="48" alt="Lucid">
+            </div>
+            <p>Please Wait...</p>
+        </div>
+    </div>
+    <!-- Overlay For Sidebars -->
+    <div id="wrapper">
+        <nav class="navbar navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-btn d-none">
+                    <button type="button" class="btn-toggle-offcanvas hidden-sm">
+                        <i class="lnr lnr-menu fa fa-bars"></i>
+                    </button>
+                </div>
+                <div class="navbar-brand">
+                    <a href="#">
+                        <img src="https://www.wrraptheme.com/templates/lucid/html/assets/images/logo.svg"
+                            alt="Lucid Logo" class="img-responsive logo">
+                    </a>
+                </div>
+                <div class="navbar-right">
+                    <div id="navbar-menu">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a href="new-order.html" class="btn btn-default">
+                                    <i class="fa fa-line-chart"></i>
+                                    <span>New Order</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="order-summary.html" class="btn btn-default">
+                                    <i class="fa fa-cart-plus"></i>
+                                    <span>Order Summary</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="prebook-summary.html" class="btn btn-info">
+                                    <i class="fa fa-opencart"></i>
+                                    <span>Prebook Summary</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="purchased-items.html" class="btn btn-default">
+                                    <i class="fa fa-cart-arrow-down"></i>
+                                    <span>Purchased Items</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="icon-menu"><i class="icon-login"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div id="main-content">
+            <div class="container-fluid">
+                <div class="block-header new_order">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2>Prebook Summary Details</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row clearfix">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="body">
+                                <div class="row clearfix">
+                                    <div class="col-lg-6 col-md-12">
+                                        <div class="receipt-left">
+                                            <img class="img-fluid" src="images/T05N441A.avif"
+                                                style="max-width: 100px; border-radius: 43px;">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-12 text-right">
+                                        <h5>Alstroemeria Assorted FA.</h5>
+                                        <p class="mb-0">+1 2345-6789 <i class="fa fa-phone"></i></p>
+                                        <p class="mb-0">info@gmail.com <i class="fa fa-envelope-o"></i></p>
+                                        <p>USA <i class="fa fa-location-arrow"></i></p>
+                                    </div>
+                                </div>
+                                <div class="row clearfix">
+                                    <div class="col-lg-8 col-md-12">
+                                        <h5>Carnation <small>&nbsp; | &nbsp; Order Number : 123</small></h5>
+                                        <p class="mb-0"><b>Mobile :</b> +1 2345-6789</p>
+                                        <p class="mb-0"><b>Email :</b> info@gmail.com</p>
+                                        <p><b>Address :</b> NewYork, USA</p>
+                                    </div>
+                                    <div class="col-lg-4 col-md-12 text-right">
+                                        <h3>Receipt</h3>
+                                    </div>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead class="thead-dark">
+                                            <tr>
+                                                <th>Alstroemeria Assorted FA.</th>
+                                                <th class="text-right">Amount</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="col-lg-6 col-md-6">Order Quantity</td>
+                                                <td class="col-lg-6 col-md-6 text-right">
+                                                    <input type="number" name="" class="form-control" value="34">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-lg-6 col-md-6">Price Per/Qty</td>
+                                                <td class="col-lg-6 col-md-6 text-right"><i class="fa fa-dollar"></i>
+                                                    150/-</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-lg-6 col-md-6">What is your carrier choice.</td>
+                                                <td class="col-lg-6 col-md-6 text-right">
+                                                    <select class="form-control">
+                                                        <option value="">Default</option>
+                                                        <option value="">Some text...</option>
+                                                        <option value="">Some text...</option>
+                                                        <option value="">Some text...</option>
+                                                        <option value="">Some text...</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-lg-6 col-md-6">When do you want your product to be
+                                                    shipped.</td>
+                                                <td class="col-lg-6 col-md-6 text-right">
+                                                    <input type="date" class="form-control" value="2024-05-03">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-lg-6 col-md-6">#Order: Where it should be shipped</td>
+                                                <td class="col-lg-6 col-md-6 text-right">
+                                                    <textarea rows="3"
+                                                        class="form-control">610 Cleveland Lane Miami, FL 33156</textarea>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-right">
+                                                    <p>Total Amount:</p>
+                                                    <p>Late Fees:</p>
+                                                    <p>Payable Amount:</p>
+                                                    <p>Balance Due:</p>
+                                                </td>
+                                                <td class="text-right">
+                                                    <p><strong><i class="fa fa-dollar"></i> 65,500/-</strong></p>
+                                                    <p><strong><i class="fa fa-dollar"></i> 500/-</strong></p>
+                                                    <p><strong><i class="fa fa-dollar"></i> 1300/-</strong></p>
+                                                    <p><strong><i class="fa fa-dollar"></i> 9500/-</strong></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-right">
+                                                    <h6>Total:</h6>
+                                                </td>
+                                                <td class="text-danger text-right">
+                                                    <h6><i class="fa fa-dollar"></i> 31.566/-</h6>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="row clearfix">
+                                    <div class="col-lg-8 col-md-12">
+                                        <p class="mb-0"><b>Date :</b> 15 May 2018</p>
+                                        <h6 class="mb-0 text-muted">Thank you for your business!</h6>
+                                    </div>
+                                    <div class="col-lg-4 col-md-12">
+                                        <h5>Signature</h5>
+                                        <input type="text" name="" id="" class="form-control" placeholder="Your Name">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="header">
+                                <h2>Payment method</h2>
+                            </div>
+                            <div class="body">
+                                <ul class="nav bg-light nav-pills rounded nav-fill mb-3" role="tablist">
+                                    <li class="nav-item"><a class="nav-link active show" data-toggle="pill"
+                                            href="#nav-tab-card"><i class="fa fa-credit-card"></i> Credit Card</a></li>
+                                    <li class="nav-item"><a class="nav-link" data-toggle="pill"
+                                            href="#nav-tab-paypal"><i class="fa fa-paypal"></i> Paypal</a></li>
+                                    <li class="nav-item"><a class="nav-link" data-toggle="pill" href="#nav-tab-bank"><i
+                                                class="fa fa-university"></i> Bank Transfer</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane fade active show" id="nav-tab-card">
+                                        <p class="alert alert-success">Some text success or error</p>
+                                        <form role="form">
+                                            <div class="form-group">
+                                                <label for="username">Full name (on the card)</label>
+                                                <input type="text" class="form-control" name="username" placeholder=""
+                                                    required="">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="cardNumber">Card number</label>
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" name="cardNumber"
+                                                        placeholder="">
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text text-muted">
+                                                            <i class="fa fa-cc-visa"></i> &nbsp; <i
+                                                                class="fa fa-cc-amex"></i> &nbsp;
+                                                            <i class="fa fa-cc-mastercard"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-8">
+                                                    <div class="form-group">
+                                                        <label><span class="hidden-xs">Expiration</span> </label>
+                                                        <div class="input-group">
+                                                            <input type="number" class="form-control" placeholder="MM"
+                                                                name="">
+                                                            <input type="number" class="form-control" placeholder="YY"
+                                                                name="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="form-group">
+                                                        <label data-toggle="tooltip" title=""
+                                                            data-original-title="3 digits code on back side of the card">CVV
+                                                            <i class="fa fa-question-circle"></i></label>
+                                                        <input type="number" class="form-control" required="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button class="subscribe btn btn-primary btn-block" type="button"> Confirm
+                                            </button>
+                                        </form>
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-tab-paypal">
+                                        <p>Paypal is easiest way to pay online</p>
+                                        <p><button type="button" class="btn btn-primary"> <i class="fab fa-paypal"></i>
+                                                Log in my Paypal </button></p>
+                                        <p><strong>Note:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing
+                                            elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        </p>
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-tab-bank">
+                                        <p>Bank accaunt details</p>
+                                        <dl class="param">
+                                            <dt>BANK: </dt>
+                                            <dd> THE WORLD BANK</dd>
+                                        </dl>
+                                        <dl class="param">
+                                            <dt>Accaunt number: </dt>
+                                            <dd> 12345678912345</dd>
+                                        </dl>
+                                        <dl class="param">
+                                            <dt>IBAN: </dt>
+                                            <dd> 123456789</dd>
+                                        </dl>
+                                        <p><strong>Note:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing
+                                            elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Javascript -->
+    <script src="js/libscripts.bundle.js"></script>
+    <script src="js/vendorscripts.bundle.js"></script>
+    <script src="js/jquery.multi-select.js"></script>
+    <script src="js/bootstrap/bootstrap-multiselect.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/mainscripts.bundle.js"></script>
+    <script src="js/advanced-form-elements.js"></script>
+    </script>
+</body>
+
+</html>

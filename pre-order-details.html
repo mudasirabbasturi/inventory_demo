@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>:: Inventory Demo :: Home</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="Lucid Bootstrap 4.1.1 Admin Template">
+    <meta name="author" content="WrapTheme, design by: ThemeMakker.com">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- VENDOR CSS -->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap-multiselect.css">
+    <link rel="stylesheet" href="css/multi-select.css">
+    <link rel="stylesheet" href="css/select2.css">
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/color_skins.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ag-grid-community@31.3.2/styles/ag-grid.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ag-grid-community@31.3.2/styles/ag-theme-quartz.css" />
+
+    <style>
+        /* body {
+                overflow: hidden;
+            } */
+
+        /* #left-sidebar {
+                width: 200px;
+            }
+    
+            #main-content {
+                width: calc(100% - 200px);
+                padding-left: 0px !important;
+            }
+    
+            .metismenu>li i {
+                margin-right: 10px !important;
+            } */
+
+        .ag-theme-quartz .ag-header {
+            font-family: "Ubuntu", sans-serif;
+        }
+
+        .ag-theme-quartz .ag-header-group-cell {
+            font-size: 11px;
+        }
+
+        .ag-theme-quartz .ag-header-cell {
+            font-size: 12px;
+        }
+
+        .ag-theme-quartz .ag-cell {
+            font-size: 12px;
+        }
+
+        .ag-header-cell-label {
+            white-space: normal !important;
+            word-wrap: break-word !important;
+        }
+        .receipt {
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+        .receipt-header,
+        .receipt-footer {
+            text-align: center;
+        }
+        .receipt-logo {
+            max-width: 100px;
+            border-radius: 50px;
+        }
+        .receipt h5, .receipt p {
+            margin: 0;
+        }
+        .receipt-table th, .receipt-table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        .text-right {
+            text-align: right;
+        }
+        .print-button {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .receipt-body hr {
+            margin: 4px 0 !important;
+        }
+       
+    </style>
+</head>
+
+<body class="theme-cyan">
+
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="m-t-30"><img src="https://www.wrraptheme.com/templates/lucid/html/assets/images/logo-icon.svg"
+                    width="48" height="48" alt="Lucid"></div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+    <!-- Overlay For Sidebars -->
+
+    <div id="wrapper">
+
+        <nav class="navbar navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-btn">
+                    <button type="button" class="btn-toggle-offcanvas"><i class="lnr lnr-menu fa fa-bars"></i></button>
+                </div>
+
+                <div class="navbar-brand">
+                    <a href="index.html"><img
+                            src="https://www.wrraptheme.com/templates/lucid/html/assets/images/logo.svg"
+                            alt="Lucid Logo" class="img-responsive logo"></a>
+                </div>
+
+                <div class="navbar-right">
+                    <div id="navbar-menu">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a href="available-stock.html" class="btn btn-default">
+                                    <i class="fa fa-line-chart"></i>
+                                    <span>Available Stock</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="pre-order.html" class="btn btn-info">
+                                    <i class="fa fa-cart-plus"></i>
+                                    <span>Pre-Orders</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="pre-sale.html" class="btn btn-default">
+                                    <i class="fa fa-opencart"></i>
+                                    <span>Pre-Sales</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="purchase.html" class="btn btn-default">
+                                    <i class="fa fa-cart-arrow-down"></i>
+                                    <span>Purchasing</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="icon-menu"><i class="icon-login"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div id="left-sidebar" class="sidebar mini-sidebar">
+            <div class="sidebar-scroll">
+                <!-- User Account Info -->
+                <div class="user-account">
+                    <img src="images/user.png" class="rounded-circle user-photo" alt="User Profile Picture">
+                    <div class="dropdown">
+                        <span>Welcome,</span>
+                        <a href="javascript:void(0);" class="dropdown-toggle user-name"
+                            data-toggle="dropdown"><strong>Alizee Thomas</strong></a>
+                        <ul class="dropdown-menu dropdown-menu-right account">
+                            <li><a href="#"><i class="icon-user"></i>My Profile</a></li>
+                            <li><a href="#"><i class="icon-envelope-open"></i>Messages</a></li>
+                            <li><a href="javascript:void(0);"><i class="icon-settings"></i>Settings</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#"><i class="icon-power"></i>Logout</a></li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <ul class="row list-unstyled">
+                        <li class="col-4">
+                            <small>Sales</small>
+                            <h6>456</h6>
+                        </li>
+                        <li class="col-4">
+                            <small>Order</small>
+                            <h6>1350</h6>
+                        </li>
+                        <li class="col-4">
+                            <small>Revenue</small>
+                            <h6>$2.13B</h6>
+                        </li>
+                    </ul>
+                </div>
+                <hr>
+
+                <!-- Navigation Tabs -->
+                <ul class="nav nav-tabs">
+                    <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Chat"><i
+                                class="icon-book-open"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#setting"><i
+                                class="icon-settings"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#question"><i
+                                class="icon-question"></i></a></li>
+                </ul>
+
+                <!-- Tab Panes -->
+                <div class="tab-content p-l-0 p-r-0">
+                    <!-- Menu Tab Content -->
+                    <div class="tab-pane active" id="menu">
+                        <nav id="left-sidebar-nav" class="sidebar-nav">
+                            <ul id="main-menu" class="metismenu">
+                                <li>
+                                    <a href="#" class="has-arrow">
+                                        <i class="fa fa-line-chart"></i> 
+                                        <span>Available Stock</span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="available-stock.html">All Stock</a></li>
+                                        <li><a href="add-stock.html">Add Stock</a></li>
+                                    </ul>
+                                </li>
+                                <li class="active">
+                                    <a href="#" class="has-arrow">
+                                        <i class="fa fa-cart-plus"></i>
+                                        <span>Pre-Orders</span></a>
+                                    <ul>
+                                        <li class="active"><a href="pre-order.html">Pre-Orders</a></li>
+                                        <li><a href="add-pre-order.html">Add Pre-Order</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="has-arrow">
+                                        <i class="fa fa-opencart"></i>
+                                        <span>Pre-Sales</span></a>
+                                    <ul>
+                                        <li><a href="pre-sale.html">Pre-Sales</a></li>
+                                        <li><a href="add-pre-sale.html">Add Pre-Sale</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="has-arrow">
+                                        <i class="fa fa-cart-arrow-down"></i>
+                                        <span>Purchasing</span></a>
+                                    <ul>
+                                        <li><a href="purchase.html">All Purchases</a></li>
+                                        <li><a href="#">Add Purchase Order</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="has-arrow">
+                                        <i class="fa fa-cogs"></i>
+                                        <span>Product Options</span></a>
+                                    <ul>
+                                        <li>
+                                            <a href="add-product-options.html">
+                                                Add Product Options
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="category.html">Category</a>
+                                        </li>
+                                        <li>
+                                            <a href="color.html">Color</a>
+                                        </li>
+                                        <li>
+                                            <a href="farm.html">Farm</a>
+                                        </li>
+                                        <li>
+                                            <a href="box-type.html">Box Type</a>
+                                        </li>
+                                    </ul>
+                                </li>
+       
+                                <li>
+                                    <a href="#" class="has-arrow">
+                                        <i class="icon-user-follow"></i> 
+                                        <span> Customer Management</span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="customer.html">View Customers</a></li>
+                                        <li><a href="#">Add Customer</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="has-arrow">
+                                        <i class="fa fa-truck"></i> 
+                                        <span>Shipping Management</span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="#">View Shipments</a></li>
+                                        <li><a href="#">Add Shipment</a></li>
+                                        <li><a href="#">Shipping Reports</a></li>
+                                    </ul>
+                                </li>
+
+                                <!-- Menu Item: Reports -->
+                                <li>
+                                    <a href="#" class="has-arrow">
+                                        <i class="fa fa-bar-chart"></i>
+                                        <span>Reports</span></a>
+                                    <ul>
+                                        <li><a href="#">Sales Reports</a></li>
+                                        <li><a href="#">Stock Reports</a></li>
+                                        <li><a href="#">Order Reports</a></li>
+                                        <li><a href="#">Purchase Reports</a></li>
+                                        <li><a href="#">User Reports</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="has-arrow">
+                                        <i class=" icon-settings"></i>
+                                        <span>Settings</span></a>
+                                    <ul>
+                                        <li><a href="#">General Settings</a></li>
+                                        <li><a href="#">Payment Settings</a></li>
+                                        <li><a href="#">Shipping Settings</a></li>
+                                        <li><a href="#">Notification Settings</a></li>
+                                        <li><a href="#">System Settings</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="main-content">
+            <div class="container-fluid">
+                <div class="block-header">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-8 col-sm-12">
+                            <h2><a href="javascript:void(0);" class="btn btn-xs btn-link btn-toggle-fullwidth"><i
+                                        class="fa fa-arrow-left"></i></a>Purchasing</h2>
+                            <ul class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html"><i class="icon-home"></i></a></li>
+                                <li class="breadcrumb-item active"><Pre-Sale></Pre-Sale>Pre-Order Details</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-7 col-md-4 col-sm-12 text-right">
+                            <div class="inlineblock text-center m-r-15 m-l-15 hidden-sm">
+                                <div class="sparkline text-left" data-type="line" data-width="8em" data-height="20px"
+                                    data-line-Width="1" data-line-Color="#00c5dc" data-fill-Color="transparent">
+                                    3,5,1,6,5,4,8,3</div>
+                                <span>Visitors</span>
+                            </div>
+                            <div class="inlineblock text-center m-r-15 m-l-15 hidden-sm">
+                                <div class="sparkline text-left" data-type="line" data-width="8em" data-height="20px"
+                                    data-line-Width="1" data-line-Color="#f4516c" data-fill-Color="transparent">
+                                    4,6,3,2,5,6,5,4</div>
+                                <span>Visits</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row clearfix" id="receipt-section">
+                    <div class="col-sm-12 col-md-8">
+                        <div class="receipt card">
+                            <div class="receipt-header">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <img src="images/T05N441A.avif" class="receipt-logo" alt="Logo">
+                                    </div>
+                                    <div class="col-6 text-right">
+                                        <h5>Alstroemeria Assorted FA.</h5>
+                                        <p>+1 2345-6789 <i class="fa fa-phone"></i></p>
+                                        <p>info@gmail.com <i class="fa fa-envelope-o"></i></p>
+                                        <p>USA <i class="fa fa-location-arrow"></i></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                    
+                            <div class="receipt-body">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <h5>Carnation <small>&nbsp; | &nbsp; Order Number : 123</small></h5><hr>
+                                        <p><b>Mobile :</b> +1 2345-6789</p><hr>
+                                        <p><b>Email :</b> info@gmail.com</p><hr>
+                                        <p><b>Pemanent Address :</b> NewYork, USA</p><hr>
+                                        <p><b>Delivery Address :</b> 610 Cleveland Lane Miami, FL 33156</p><hr>
+                                        <p><b>Payment Method :</b> Bank Transfer</p><hr>
+                                        <p><b>Payment Status :</b> Paid</p><hr>
+                                        <select name="" id="changePaymentStatus" class="form-control">
+                                            <option value="">Change Payment Status</option>
+                                            <option value="">Paid</option>
+                                            <option value="">Pending</option>
+                                            <option value="">Cancel</option>
+                                        </select><hr>
+                                        <p><b>Delivery Status :</b> Pending</p><hr>
+                                        <select name="" id="changeStatus" class="form-control">
+                                            <option value="">Change Status</option>
+                                            <option value="">Process</option>
+                                            <option value="">Deliver</option>
+                                        </select>
+                                        <hr>
+                                    </div>
+                                    <div class="col-4 text-right">
+                                        <h3>Receipt</h3>
+                                    </div>
+                                </div>
+                    
+                                <div class="table-responsive">
+                                    <table class="table receipt-table">
+                                        <thead class="thead-dark">
+                                            <tr>
+                                                <th>Alstroemeria Assorted FA.</th>
+                                                <th class="text-right">Amount</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Order Quantity</td>
+                                                <td class="text-right">
+                                                    <input type="number" class="form-control" value="34">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Price Per/Qty</td>
+                                                <td class="text-right">$150/-</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Carrier choice</td>
+                                                <td class="text-right">
+                                                    <select class="form-control">
+                                                        <option value="">Default</option>
+                                                        <option value="">Some text...</option>
+                                                        <option value="">Some text...</option>
+                                                        <option value="">Some text...</option>
+                                                        <option value="">Some text...</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>When Product to be shipped</td>
+                                                <td class="text-right">
+                                                    <input type="date" class="form-control" value="2024-05-03">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Where it should be shipped</td>
+                                                <td class="text-right">
+                                                    <textarea rows="3" class="form-control">610 Cleveland Lane Miami, FL 33156</textarea>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-right">Total Amount:</td>
+                                                <td class="text-right">$65,500/-</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-right">Late Fees:</td>
+                                                <td class="text-right">$500/-</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-right">Payable Amount:</td>
+                                                <td class="text-right">$1300/-</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-right">Balance Due:</td>
+                                                <td class="text-right">$9500/-</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-right"><h6>Total:</h6></td>
+                                                <td class="text-danger text-right"><h6>$76800/-</h6></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                    
+                            <hr>
+                    
+                            <div class="receipt-footer">
+                                <p><b>Date :</b> 15 May 2018</p>
+                                <h6 class="text-muted">Thank you for your business!</h6>
+                                <p><b>Signature:</b> <input type="text" class="form-control" value="signature name" readonly></p>
+                            </div>
+                    
+                            <div class="print-button" id="printbtn">
+                                <button class="btn btn-primary" onclick="printReceipt()">Print Receipt</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4" id="otherDetails">
+                        <div class="card p-2">
+                            <p>Please Specify What detail should here about customer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Javascript -->
+    <script src="js/libscripts.bundle.js"></script>
+    <script src="js/vendorscripts.bundle.js"></script>
+    <script src="js/jquery.multi-select.js"></script>
+    <script src="js/bootstrap/bootstrap-multiselect.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/mainscripts.bundle.js"></script>
+    <script src="js/advanced-form-elements.js"></script>
+    <script>
+        function printReceipt() {
+            document.getElementById("printbtn").style.display = "none";
+            document.getElementById("changePaymentStatus").style.display = "none";
+            document.getElementById("changeStatus").style.display = "none";
+            document.getElementById("otherDetails").style.display = "none";
+            var printContents = document.getElementById('receipt-section').innerHTML;
+            var originalContents = document.body.innerHTML;
+            
+            document.body.innerHTML = printContents;
+            window.print();
+            document.body.innerHTML = originalContents;
+        }
+        </script>
+</body>
+
+</html>

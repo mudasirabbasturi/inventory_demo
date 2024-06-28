@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>:: Inventory Demo :: Home</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="Lucid Bootstrap 4.1.1 Admin Template">
+    <meta name="author" content="WrapTheme, design by: ThemeMakker.com">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- VENDOR CSS -->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap-multiselect.css">
+    <link rel="stylesheet" href="css/multi-select.css">
+    <link rel="stylesheet" href="css/select2.css">
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/color_skins.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ag-grid-community@31.3.2/styles/ag-grid.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ag-grid-community@31.3.2/styles/ag-theme-quartz.css" />
+
+    <style>
+        /* body {
+            overflow: hidden;
+        } */
+
+        /* #left-sidebar {
+            width: 200px;
+        }
+
+        #main-content {
+            width: calc(100% - 200px);
+            padding-left: 0px !important;
+        }
+
+        .metismenu>li i {
+            margin-right: 10px !important;
+        } */
+
+        .ag-theme-quartz .ag-header {
+            font-family: "Ubuntu", sans-serif;
+        }
+
+        .ag-theme-quartz .ag-header-group-cell {
+            font-size: 11px;
+        }
+
+        .ag-theme-quartz .ag-header-cell {
+            font-size: 12px;
+        }
+
+        .ag-theme-quartz .ag-cell {
+            font-size: 12px;
+        }
+
+        .ag-header-cell-label {
+            white-space: normal !important;
+            word-wrap: break-word !important;
+        }
+
+        .new_order h2 {
+            position: relative;
+            font-size: 14px;
+            padding-left: 10px;
+            display: inline-block;
+        }
+
+        .new_order h2::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+            width: 3px;
+            height: 100%;
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body class="theme-cyan layout-fullwidth">
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="m-t-30">
+                <img src="https://www.wrraptheme.com/templates/lucid/html/assets/images/logo-icon.svg" width="48"
+                    height="48" alt="Lucid">
+            </div>
+            <p>Please Wait...</p>
+        </div>
+    </div>
+    <!-- Overlay For Sidebars -->
+    <div id="wrapper">
+        <nav class="navbar navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-btn d-none">
+                    <button type="button" class="btn-toggle-offcanvas hidden-sm">
+                        <i class="lnr lnr-menu fa fa-bars"></i>
+                    </button>
+                </div>
+                <div class="navbar-brand">
+                    <a href="#">
+                        <img src="https://www.wrraptheme.com/templates/lucid/html/assets/images/logo.svg"
+                            alt="Lucid Logo" class="img-responsive logo">
+                    </a>
+                </div>
+                <div class="navbar-right">
+                    <div id="navbar-menu">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a href="new-order.html" class="btn btn-default">
+                                    <i class="fa fa-line-chart"></i>
+                                    <span>New Order</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="order-summary.html" class="btn btn-info">
+                                    <i class="fa fa-cart-plus"></i>
+                                    <span>Order Summary</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="prebook-summary.html" class="btn btn-default">
+                                    <i class="fa fa-opencart"></i>
+                                    <span>Prebook Summary</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="purchased-items.html" class="btn btn-default">
+                                    <i class="fa fa-cart-arrow-down"></i>
+                                    <span>Purchased Items</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="icon-menu"><i class="icon-login"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div id="main-content">
+            <div class="container-fluid">
+                <div class="block-header new_order">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <h2>Filter By Category</h2>
+                            <select id="categorySelect" class="form-control show-tick ms select2"
+                                data-placeholder="Select">
+                                <option value="All">All</option>
+                                <option value="Alstroemeria">Alstroemeria</option>
+                                <option value="Aster">Aster</option>
+                                <option value="Carnation">Carnation</option>
+                                <option value="Consumer Bunch Roses">Consumer Bunch Roses</option>
+                                <option value="Delphinium">Delphinium</option>
+                                <option value="Hydrangea">Hydrangea</option>
+                                <option value="Pompon">Pompon</option>
+                                <option value="Roses">Roses</option>
+                                <option value="Spider">Spider</option>
+                                <option value="Spray Roses">Spray Roses</option>
+                                <option value="Stock">Stock</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <div class="">
+                                <div class="text-left">
+                                    <h2>Or Filter By Color</h2>
+                                </div>
+                                <select id="colorSelect" class="form-control show-tick ms select2 text-left"
+                                    data-placeholder="Select">
+                                    <option value="All">All</option>
+                                    <option value="Assorted">Assorted</option>
+                                    <option value="Black">Black</option>
+                                    <option value="Green">Green</option>
+                                    <option value="Hot Pink">Hot Pink</option>
+                                    <option value="Lavender">Lavender</option>
+                                    <option value="Light Pink">Light Pink</option>
+                                    <option value="Orange">Orange</option>
+                                    <option value="Peach">Peach</option>
+                                    <option value="Red">Red</option>
+                                    <option value="White">White</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row clearfix">
+                    <div class="col-lg-12">
+                        <div id="inventoryGrid" class="ag-theme-quartz" style="height: 500px; width:100%;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Javascript -->
+    <script src="js/libscripts.bundle.js"></script>
+    <script src="js/vendorscripts.bundle.js"></script>
+    <script src="js/jquery.multi-select.js"></script>
+    <script src="js/bootstrap/bootstrap-multiselect.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/mainscripts.bundle.js"></script>
+    <script src="js/advanced-form-elements.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.js"></script>
+    <script>
+        const inventoryData = [
+            { product: "Alstroemeria Assorted FA", price: '299.00', stems: 10, boxType: 'Q', units: '20 BU', markCode: '', orderQuantity: 0, action: 'Add', category: "Alstroemeria", color: "Assorted" },
+            { product: "Aster Solidago Golden Glory", price: '400.57', stems: 10, boxType: 'Q', units: '12 BU', markCode: '', orderQuantity: 0, action: 'Add', category: "Aster", color: "Golden" },
+            { product: "Carnation White FA", price: '209', stems: 175, boxType: 'Q', units: '175 ST', markCode: '', orderQuantity: 0, action: 'Add', category: "Carnation", color: "White" },
+            { product: "Consumer Bunch Roses Assorted 12 Stems 40cm", price: '300', stems: 12, boxType: 'H', units: '15 BU', markCode: '', orderQuantity: 0, action: 'Add', category: "Consumer Bunch Roses", color: "Assorted" },
+            { product: "Delphinium Black Hybrid Deep Blue Jay 90 cm", price: '7.75', stems: 10, boxType: 'Q', units: '12 BU', markCode: '', orderQuantity: 0, action: 'Add', category: "Delphinium", color: "Black" },
+            { product: "Hydrangea Green Minis SE", price: '0.95', stems: 50, boxType: 'Q', units: '50 ST', markCode: '', orderQuantity: 0, action: 'Add', category: "Hydrangea", color: "Green" },
+            { product: "Hydrangea White SE", price: '699', stems: 40, boxType: 'Q', units: '40 ST', markCode: '', orderQuantity: 0, action: 'Add', category: "Hydrangea", color: "White" },
+            { product: "Pompon Yellow Daisy SE", price: '1.85', stems: 10, boxType: 'Q', units: '18 BU', markCode: '', orderQuantity: 0, action: 'Add', category: "Pompon", color: "Yellow" },
+            { product: "Pompon Yellow Novelty Viking SE", price: '288.25', stems: 5, quantity: 3, boxType: 'H', units: '300 ST', markCode: '', orderQuantity: 0, action: 'Add', category: "Pompon", color: "Yellow" },
+            { product: "Roses Assorted 40cm", price: '3500', stems: 25, boxType: 'Q', units: '100 ST', markCode: '', orderQuantity: 0, action: 'Add', category: "Roses", color: "Assorted" },
+        ];
+
+        const columnDefs = [
+            { colId: "desc", headerName: "Product Description", field: "product", width: 400 },
+            {
+                headerName: "Total Price",
+                field: "price",
+                valueFormatter: (params) => {
+                    return '$' + params.value;
+                }
+            },
+            {
+                headerName: "Stems/Bunch",
+                field: "stems"
+            },
+            {
+                headerName: "Box Type",
+                field: "boxType",
+            },
+            {
+                headerName: "Units/Box",
+                field: "units"
+            },
+            {
+                headerName: "Mark Code",
+                field: "markCode",
+                editable: true,
+                filter: false,
+            },
+            {
+                headerName: "Order Quantity (Boxes)",
+                field: "orderQuantity",
+                editable: true,
+                cellDataType: "number",
+                filter: false,
+            },
+            {
+                headerName: "Action",
+                field: "action",
+                filter: false,
+                cellRenderer: function (params) {
+                    return `<a href="order-summary-details.html" 
+                                   class="btn
+                                   btn-sm
+                                   btn-outline-warning">
+                                    <i class="fa fa-eye"></i> / 
+                                    <i class="fa fa-pencil"></i>
+                                </a>`;
+                }
+            },
+            {
+                headerName: "Category",
+                field: "category",
+                hide: true
+            },
+            {
+                headerName: "Color",
+                field: "color",
+                hide: true
+            }
+        ];
+
+        const gridOptions = {
+            columnDefs: columnDefs,
+            rowData: inventoryData,
+            animateRows: true,
+            pagination: true,
+            paginationPageSize: 10,
+            autoSizeStrategy: {
+                type: 'fitGridWidth',
+            },
+            defaultColDef: {
+                filter: "agTextColumnFilter",
+                floatingFilter: true,
+            },
+            rowSelection: "multiple",
+            suppressRowClickSelection: true,
+            pagination: true,
+            paginationPageSize: 10,
+            paginationPageSizeSelector: [10, 25, 50],
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const eGridDiv = document.querySelector('#inventoryGrid');
+            new agGrid.Grid(eGridDiv, gridOptions);
+        });
+
+        function filterByCategory(category) {
+            gridOptions.api.setQuickFilter(category === 'All' ? '' : category);
+        }
+        $(document).ready(function () {
+            // Initialize Select2
+            $('#categorySelect').select2();
+
+            // Bind change event to the select element
+            $('#categorySelect').on('change', function () {
+                var selectedCategory = $(this).val();
+                filterByCategory(selectedCategory);
+            });
+
+            // Initialize Select2 for color select
+            $('#colorSelect').select2();
+
+            // Bind change event to the color select element
+            $('#colorSelect').on('change', function () {
+                var selectedColor = $(this).val();
+                filterByColor(selectedColor);
+            });
+        });
+        function filterByColor(color) {
+            const categoryFilterInstance = gridOptions.api.getFilterInstance('category');
+            const categoryFilter = categoryFilterInstance && categoryFilterInstance.getModel() ? categoryFilterInstance.getModel().filter : '';
+            const combinedFilter = color === 'All' ? categoryFilter : `${categoryFilter || ''} ${color}`;
+            gridOptions.api.setQuickFilter(combinedFilter.trim());
+        }
+
+        function updateOrder() {
+            alert('do you really want update order.')
+        }
+
+    </script>
+</body>
+
+</html>

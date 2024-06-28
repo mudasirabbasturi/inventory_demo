@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>:: Inventory Demo :: Home</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="Lucid Bootstrap 4.1.1 Admin Template">
+    <meta name="author" content="WrapTheme, design by: ThemeMakker.com">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- VENDOR CSS -->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fonts/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-multiselect.css">
+    <link rel="stylesheet" href="css/multi-select.css">
+    <link rel="stylesheet" href="css/select2.css">
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/color_skins.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ag-grid-community@31.3.2/styles/ag-grid.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ag-grid-community@31.3.2/styles/ag-theme-quartz.css" />
+
+    <style>
+        /* body {
+            overflow: hidden;
+        } */
+
+        /* #left-sidebar {
+            width: 200px;
+        }
+
+        #main-content {
+            width: calc(100% - 200px);
+            padding-left: 0px !important;
+        }
+
+        .metismenu>li i {
+            margin-right: 10px !important;
+        } */
+
+        .ag-theme-quartz .ag-header {
+            font-family: "Ubuntu", sans-serif;
+        }
+
+        .ag-theme-quartz .ag-header-group-cell {
+            font-size: 11px;
+        }
+
+        .ag-theme-quartz .ag-header-cell {
+            font-size: 12px;
+        }
+
+        .ag-theme-quartz .ag-cell {
+            font-size: 12px;
+        }
+
+        .ag-header-cell-label {
+            white-space: normal !important;
+            word-wrap: break-word !important;
+        }
+
+        .new_order h2 {
+            position: relative;
+            font-size: 14px;
+            font-weight: 400;
+            padding-left: 10px;
+            display: inline-block;
+        }
+
+        .new_order h2::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+            width: 3px;
+            height: 100%;
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body class="theme-cyan">
+
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="m-t-30"><img src="https://www.wrraptheme.com/templates/lucid/html/assets/images/logo-icon.svg"
+                    width="48" height="48" alt="Lucid"></div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+    <!-- Overlay For Sidebars -->
+
+    <div id="wrapper">
+
+        <nav class="navbar navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-btn">
+                    <button type="button" class="btn-toggle-offcanvas"><i class="lnr lnr-menu fa fa-bars"></i></button>
+                </div>
+
+                <div class="navbar-brand">
+                    <a href="index.html"><img
+                            src="https://www.wrraptheme.com/templates/lucid/html/assets/images/logo.svg"
+                            alt="Lucid Logo" class="img-responsive logo"></a>
+                </div>
+
+                <div class="navbar-right">
+                    <div id="navbar-menu">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a href="available-stock.html" class="btn btn-default">
+                                    <i class="fa fa-line-chart"></i>
+                                    <span>Available Stock</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="pre-order.html" class="btn btn-default">
+                                    <i class="fa fa-cart-plus"></i>
+                                    <span>Pre-Orders</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="pre-sale.html" class="btn btn-info">
+                                    <i class="fa fa-opencart"></i>
+                                    <span>Pre-Sales</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="purchase.html" class="btn btn-default">
+                                    <i class="fa fa-cart-arrow-down"></i>
+                                    <span>Purchasing</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="icon-menu"><i class="icon-login"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div id="left-sidebar" class="sidebar mini-sidebar">
+            <div class="sidebar-scroll">
+                <!-- User Account Info -->
+                <div class="user-account">
+                    <img src="images/user.png" class="rounded-circle user-photo" alt="User Profile Picture">
+                    <div class="dropdown">
+                        <span>Welcome,</span>
+                        <a href="javascript:void(0);" class="dropdown-toggle user-name"
+                            data-toggle="dropdown"><strong>Alizee Thomas</strong></a>
+                        <ul class="dropdown-menu dropdown-menu-right account">
+                            <li><a href="#"><i class="icon-user"></i>My Profile</a></li>
+                            <li><a href="#"><i class="icon-envelope-open"></i>Messages</a></li>
+                            <li><a href="javascript:void(0);"><i class="icon-settings"></i>Settings</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#"><i class="icon-power"></i>Logout</a></li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <ul class="row list-unstyled">
+                        <li class="col-4">
+                            <small>Sales</small>
+                            <h6>456</h6>
+                        </li>
+                        <li class="col-4">
+                            <small>Order</small>
+                            <h6>1350</h6>
+                        </li>
+                        <li class="col-4">
+                            <small>Revenue</small>
+                            <h6>$2.13B</h6>
+                        </li>
+                    </ul>
+                </div>
+                <hr>
+
+                <!-- Navigation Tabs -->
+                <ul class="nav nav-tabs">
+                    <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Chat"><i
+                                class="icon-book-open"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#setting"><i
+                                class="icon-settings"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#question"><i
+                                class="icon-question"></i></a></li>
+                </ul>
+
+                <!-- Tab Panes -->
+                <div class="tab-content p-l-0 p-r-0">
+                    <!-- Menu Tab Content -->
+                    <div class="tab-pane active" id="menu">
+                        <nav id="left-sidebar-nav" class="sidebar-nav">
+                            <ul id="main-menu" class="metismenu">
+                                <!-- Menu Item: Available Stock -->
+                                <li>
+                                    <a href="#" class="has-arrow"><i class="fa fa-line-chart"></i> <span>Available
+                                            Stock</span></a>
+                                    <ul>
+                                        <li><a href="available-stock.html">All Stock</a></li>
+                                        <li><a href="add-stock.html">Add Stock</a></li>
+                                    </ul>
+                                </li>
+
+                                <!-- Repeat similar structure for other menu items -->
+                                <!-- Menu Item: Pre-Orders -->
+                                <li>
+                                    <a href="#" class="has-arrow"><i class="fa fa-cart-plus"></i>
+                                        <span>Pre-Orders</span></a>
+                                    <ul>
+                                        <li><a href="pre-order.html">Pre-Orders</a></li>
+                                        <li><a href="add-pre-order.html">Add Pre-Order</a></li>
+                                    </ul>
+                                </li>
+
+                                <!-- Menu Item: Pre-Sales -->
+                                <li class="active">
+                                    <a href="#" class="has-arrow"><i class="fa fa-opencart"></i>
+                                        <span>Pre-Sales</span></a>
+                                    <ul>
+                                        <li><a href="pre-sale.html">Pre-Sales</a></li>
+                                        <li class="active"><a href="add-pre-sale.html">Add Pre-Sale</a></li>
+                                    </ul>
+                                </li>
+
+                                <!-- Menu Item: Purchasing -->
+                                <li>
+                                    <a href="#" class="has-arrow"><i class="fa fa-cart-arrow-down"></i>
+                                        <span>Purchasing</span></a>
+                                    <ul>
+                                        <li><a href="purchase.html">All Purchases</a></li>
+                                        <li><a href="#">Add Purchase Order</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="has-arrow"><i class="fa fa-cogs"></i>
+                                        <span>Product Options</span></a>
+                                    <ul>
+                                        <li>
+                                            <a href="add-product-options.html">
+                                                Add Product Options
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="category.html">Category</a>
+                                        </li>
+                                        <li>
+                                            <a href="color.html">Color</a>
+                                        </li>
+                                        <li>
+                                            <a href="farm.html">Farm</a>
+                                        </li>
+                                        <li>
+                                            <a href="box-type.html">Box Type</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <!-- Menu Item: Order Management -->
+                                <!-- <li>
+                                    <a href="#" class="has-arrow"><i class="fa fa-list-ol"></i> <span>Order
+                                            Management</span></a>
+                                    <ul>
+                                        <li><a href="#">All Orders</a></li>
+                                        <li><a href="#">Add Order</a></li>
+                                        <li><a href="#">Order Reports</a></li>
+                                    </ul>
+                                </li> -->
+                                <!-- Menu Item: Shipping Management -->
+
+                                <!-- Menu Item: User Management -->
+                                <li>
+                                    <a href="#" class="has-arrow"><i class="icon-user-follow"></i> <span>Customer
+                                            Management</span></a>
+                                    <ul>
+                                        <li><a href="customer.html">View Customers</a></li>
+                                        <li><a href="#">Add Customer</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="has-arrow"><i class="fa fa-truck"></i> <span>Shipping
+                                            Management</span></a>
+                                    <ul>
+                                        <li><a href="#">View Shipments</a></li>
+                                        <li><a href="#">Add Shipment</a></li>
+                                        <li><a href="#">Shipping Reports</a></li>
+                                    </ul>
+                                </li>
+
+                                <!-- Menu Item: Reports -->
+                                <li>
+                                    <a href="#" class="has-arrow"><i class="fa fa-bar-chart"></i>
+                                        <span>Reports</span></a>
+                                    <ul>
+                                        <li><a href="#">Sales Reports</a></li>
+                                        <li><a href="#">Stock Reports</a></li>
+                                        <li><a href="#">Order Reports</a></li>
+                                        <li><a href="#">Purchase Reports</a></li>
+                                        <li><a href="#">User Reports</a></li>
+                                    </ul>
+                                </li>
+
+                                <!-- Menu Item: Settings -->
+                                <li>
+                                    <a href="#" class="has-arrow"><i class=" icon-settings"></i>
+                                        <span>Settings</span></a>
+                                    <ul>
+                                        <li><a href="#">General Settings</a></li>
+                                        <li><a href="#">Payment Settings</a></li>
+                                        <li><a href="#">Shipping Settings</a></li>
+                                        <li><a href="#">Notification Settings</a></li>
+                                        <li><a href="#">System Settings</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <!-- Other Tab Contents (Chat, Settings, Question) -->
+                    <!-- Content here is omitted for brevity -->
+                </div>
+            </div>
+        </div>
+
+
+        <div id="main-content">
+            <div class="container-fluid">
+                <div class="block-header new_order">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <h2>
+                                <span>
+                                    <small>
+                                        <a href="javascript:void(0);" class="btn btn-xs btn-link btn-toggle-fullwidth">
+                                            <i class="fa fa-arrow-left"></i>
+                                        </a>
+                                    </small>
+                                </span>
+                                Filter By Category
+                            </h2>
+                            <select id="categorySelect" class="form-control show-tick ms select2"
+                                data-placeholder="Select">
+                                <option value="All">All</option>
+                                <option value="Alstroemeria">Alstroemeria</option>
+                                <option value="Aster">Aster</option>
+                                <option value="Carnation">Carnation</option>
+                                <option value="Consumer Bunch Roses">Consumer Bunch Roses</option>
+                                <option value="Delphinium">Delphinium</option>
+                                <option value="Hydrangea">Hydrangea</option>
+                                <option value="Pompon">Pompon</option>
+                                <option value="Roses">Roses</option>
+                                <option value="Spider">Spider</option>
+                                <option value="Spray Roses">Spray Roses</option>
+                                <option value="Stock">Stock</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <div class="">
+                                <div class="text-left">
+                                    <h2>
+                                        <span style="visibility: hidden;display: inline-block; width: 0px;">
+                                            <small>
+                                                <a href="javascript:void(0);"
+                                                    class="btn btn-xs btn-link btn-toggle-fullwidth">
+                                                    <i class="fa fa-arrow-left"></i>
+                                                </a>
+                                            </small>
+                                        </span>
+                                        Or Filter By Color
+                                    </h2>
+                                </div>
+                                <select id="colorSelect" class="form-control show-tick ms select2 text-left"
+                                    data-placeholder="Select">
+                                    <option value="All">All</option>
+                                    <option value="Assorted">Assorted</option>
+                                    <option value="Black">Black</option>
+                                    <option value="Green">Green</option>
+                                    <option value="Hot Pink">Hot Pink</option>
+                                    <option value="Lavender">Lavender</option>
+                                    <option value="Light Pink">Light Pink</option>
+                                    <option value="Orange">Orange</option>
+                                    <option value="Peach">Peach</option>
+                                    <option value="Red">Red</option>
+                                    <option value="White">White</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row clearfix">
+                    <div class="col-12 mb-1">
+                        <small style="font-weight:bold">( add pre-sale ) Select Customer</small>
+                        <select class="form-control show-tick ms select2" data-placeholder="Select">
+                            <option value="All">Select Customer</option>
+                            <option value="Alstroemeria">Alstroemeria</option>
+                            <option value="Aster">Aster</option>
+                            <option value="Carnation">Carnation</option>
+                            <option value="Consumer Bunch Roses">Consumer Bunch Roses</option>
+                            <option value="Delphinium">Delphinium</option>
+                            <option value="Hydrangea">Hydrangea</option>
+                            <option value="Pompon">Pompon</option>
+                            <option value="Roses">Roses</option>
+                            <option value="Spider">Spider</option>
+                            <option value="Spray Roses">Spray Roses</option>
+                            <option value="Stock">Stock</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-12">
+                        <div id="inventoryGrid" class="ag-theme-quartz" style="height: 500px; width:100%;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="addPreOrder">
+            <style>
+                .modal-body hr {
+                    margin: 3px 0 !important;
+                }
+            </style>
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title" style="font-weight: 300;font-size: 15px;">
+                            Are you sure to place the order (You can upate quantity and mark code below).
+                        </h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="card">
+                            <div class="card-header">
+                                Product Details
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-3">Product:</div>
+                                    <div class="col-md-9">Aster Solidago Golden Glory</div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-3">Customer:</div>
+                                    <div class="col-md-9">Joshua Miller</div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-3">Customer Id:</div>
+                                    <div class="col-md-9">#45HVR44</div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-6">Unit Price / Bunch:</div>
+                                    <div class="col-md-6">$2</div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-3">Box Type:</div>
+                                    <div class="col-md-9">
+                                        Half
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-3">Mark Code:</div>
+                                    <div class="col-md-9">
+                                        <input type="text" name="" id="" class="form-control" placeholder="add mark code">
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-6">Order Quantity:</div>
+                                    <div class="col-md-6">
+                                        <input type="number" name="" id="" class="form-control" value="20">
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-3">Category:</div>
+                                    <div class="col-md-9">Aster</div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-3">Color:</div>
+                                    <div class="col-md-9">Golden</div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-3">Total Price:</div>
+                                    <div class="col-md-9">$300</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success btn-sm">Add To Cart</button>
+                            <button type="button" class="btn btn-info bnt-sm" data-dismiss="modal">Close</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Javascript -->
+        <!-- Javascript -->
+        <script src="js/libscripts.bundle.js"></script>
+        <script src="js/vendorscripts.bundle.js"></script>
+        <script src="js/jquery.multi-select.js"></script>
+        <script src="js/bootstrap/bootstrap-multiselect.js"></script>
+        <script src="js/select2.min.js"></script>
+        <script src="js/mainscripts.bundle.js"></script>
+        <script src="js/advanced-form-elements.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.js"></script>
+        <script>
+            const inventoryData = [
+                { product: "Alstroemeria Assorted FA", price: '2.00 /BU', stems: 10, quantity: 1, boxType: 'Q', units: '20 BU', markCode: '', orderQuantity: 0, action: 'Add', category: "Alstroemeria", color: "Assorted" },
+                { product: "Aster Solidago Golden Glory", price: '4.57/BU', stems: 10, quantity: 1, boxType: 'Q', units: '12 BU', markCode: '', orderQuantity: 0, action: 'Add', category: "Aster", color: "Golden" },
+                { product: "Carnation White FA", price: '20.25/ST', stems: 175, quantity: 1, boxType: 'Q', units: '175 ST', markCode: '', orderQuantity: 0, action: 'Add', category: "Carnation", color: "White" },
+                { product: "Consumer Bunch Roses Assorted 12 Stems 40cm", price: '3.65/ST', stems: 12, quantity: 25, boxType: 'H', units: '15 BU', markCode: '', orderQuantity: 0, action: 'Add', category: "Consumer Bunch Roses", color: "Assorted" },
+                { product: "Delphinium Black Hybrid Deep Blue Jay 90 cm", price: '7.75/BU', stems: 10, quantity: 1, boxType: 'Q', units: '12 BU', markCode: '', orderQuantity: 0, action: 'Add', category: "Delphinium", color: "Black" },
+                { product: "Hydrangea Green Minis SE", price: '0.95/BU', stems: 50, quantity: 1, boxType: 'Q', units: '50 ST', markCode: '', orderQuantity: 0, action: 'Add', category: "Hydrangea", color: "Green" },
+                { product: "Hydrangea White SE", price: '0.65/ST', stems: 40, quantity: 1, boxType: 'Q', units: '40 ST', markCode: '', orderQuantity: 0, action: 'Add', category: "Hydrangea", color: "White" },
+                { product: "Pompon Yellow Daisy SE", price: '1.85/BU', stems: 10, quantity: 1, boxType: 'Q', units: '18 BU', markCode: '', orderQuantity: 0, action: 'Add', category: "Pompon", color: "Yellow" },
+                { product: "Pompon Yellow Novelty Viking SE", price: '2.25/BU', stems: 5, quantity: 3, boxType: 'H', units: '300 ST', markCode: '', orderQuantity: 0, action: 'Add', category: "Pompon", color: "Yellow" },
+                { product: "Roses Assorted 40cm", price: '0.25/ST', stems: 25, quantity: 1, boxType: 'Q', units: '100 ST', markCode: '', orderQuantity: 0, action: 'Add', category: "Roses", color: "Assorted" },
+            ];
+
+            const columnDefs = [
+                { colId: "desc", headerName: "Product Description", field: "product", width: 400 },
+                {
+                    headerName: "Unit Price",
+                    field: "price",
+                    valueFormatter: (params) => {
+                        return '$' + params.value;
+                    }
+                },
+                {
+                    headerName: "Stems/Bunch",
+                    field: "stems"
+                },
+                {
+                    headerName: "Available Quantity",
+                    field: "quantity",
+                    valueFormatter: (params) => {
+                        return params.value + ' BX';
+                    }
+                },
+                {
+                    headerName: "Box Type",
+                    field: "boxType",
+                },
+                {
+                    headerName: "Units/Box",
+                    field: "units"
+                },
+                {
+                    headerName: "Mark Code",
+                    field: "markCode",
+                    editable: true,
+                    filter: false,
+                },
+                {
+                    headerName: "Order Quantity (Boxes)",
+                    field: "orderQuantity",
+                    editable: true,
+                    cellDataType: "number",
+                    filter: false,
+                },
+                {
+                    headerName: "Action",
+                    field: "action",
+                    filter: false,
+                    cellRenderer: function (params) {
+                        var button = document.createElement('button');
+                        button.className = 'btn btn-sm btn-outline-info';
+                        button.setAttribute('data-target', '#addPreOrder');
+                        button.setAttribute('data-toggle', 'modal');
+                        button.innerHTML = 'Add To <i class="fa fa-cart-plus"></i>';
+
+                        // button.addEventListener('click', function () {
+                        //     var customConfirmMessage = "Do you really want to add to cart?";
+                        //     if (confirm(customConfirmMessage)) {
+                        //         var rowData = params.data;
+                        //         var formattedData = Object.keys(rowData).map(function (key) {
+                        //             return `${key}: ${rowData[key]}`;
+                        //         }).join('\n');
+                        //         var customAlertMessage = "Data are added successfully:\n\n" + formattedData;
+                        //         alert(customAlertMessage);
+                        //     }
+                        // });
+                        return button;
+                    }
+                }
+                ,
+                {
+                    headerName: "Category",
+                    field: "category",
+                    hide: true
+                },
+                {
+                    headerName: "Color",
+                    field: "color",
+                    hide: true
+                }
+            ];
+
+            const gridOptions = {
+                columnDefs: columnDefs,
+                rowData: inventoryData,
+                animateRows: true,
+                pagination: true,
+                paginationPageSize: 10,
+                autoSizeStrategy: {
+                    type: 'fitGridWidth',
+                },
+                defaultColDef: {
+                    filter: "agTextColumnFilter",
+                    floatingFilter: true,
+                },
+                rowSelection: "multiple",
+                suppressRowClickSelection: true,
+                pagination: true,
+                paginationPageSize: 10,
+                paginationPageSizeSelector: [10, 25, 50],
+            };
+
+            document.addEventListener('DOMContentLoaded', () => {
+                const eGridDiv = document.querySelector('#inventoryGrid');
+                new agGrid.Grid(eGridDiv, gridOptions);
+            });
+
+            function filterByCategory(category) {
+                gridOptions.api.setQuickFilter(category === 'All' ? '' : category);
+            }
+            $(document).ready(function () {
+                // Initialize Select2
+                $('#categorySelect').select2();
+
+                // Bind change event to the select element
+                $('#categorySelect').on('change', function () {
+                    var selectedCategory = $(this).val();
+                    filterByCategory(selectedCategory);
+                });
+
+                // Initialize Select2 for color select
+                $('#colorSelect').select2();
+
+                // Bind change event to the color select element
+                $('#colorSelect').on('change', function () {
+                    var selectedColor = $(this).val();
+                    filterByColor(selectedColor);
+                });
+            });
+            function filterByColor(color) {
+                const categoryFilterInstance = gridOptions.api.getFilterInstance('category');
+                const categoryFilter = categoryFilterInstance && categoryFilterInstance.getModel() ? categoryFilterInstance.getModel().filter : '';
+                const combinedFilter = color === 'All' ? categoryFilter : `${categoryFilter || ''} ${color}`;
+                gridOptions.api.setQuickFilter(combinedFilter.trim());
+            }
+
+            function addToCart() {
+                var txt;
+                if (confirm("Press Ok, to add to cart.")) {
+                    // alert ag-grid data of clicked row
+                }
+            }
+
+        </script>
+</body>
+
+</html>
